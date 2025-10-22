@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000 !important;
+  font-family: "Space Mono", monospace;
+  color: #fff !important;
+  font-size: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+/* Spinner */
+.spinner {
+  border: 6px solid #333;
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+#loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.main.show {
+  opacity: 1;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  font-size: 18px;
+}
+
+.navbar h1 {
+  cursor: default;
+}
+.navbar h1:hover {
+  color: #d93;
+  transition: 0.3s;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0px 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar a:hover {
+  color: #d93;
+  transition: 0.3s;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 80px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.main {
+  min-height: 85vh;
+  margin: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moon-container {
+  text-align: center;
+}
+
+.description-container {
+  width: 700px;
+  text-align: justify;
+  padding-right: 100px;
+  /* height: 40px; */
+}
+
+.nxt-prv-button button {
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(129, 68, 203);
+  margin: 0px 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#prevButton {
+  position: fixed;
+  top: 50%;
+  z-index: 2;
+}
+#nextButton {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+
+.nxt-prv-button button:hover {
+  background-color: rgb(146, 94, 211);
+  transition: 0.4s;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  position: sticky;
+  /* margin-bottom: 5px; */
+}
+.copyright h3 a {
+  color: #fff;
+}
+.copyright a:hover {
+  color: #cc99ff;
+  transition: 0.3s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 10px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 4;
+  }
+
+  .nav-list {
+    font-size: 12px;
+    list-style-type: none;
+    display: none; /* Initially hide the menu */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    overflow-x: hidden;
+  }
+
+  .nav-list.menu-open {
+    display: flex; /* Display the menu when the menu-open class is applied */
+    z-index: 3;
+  }
+
+  .nav-list li {
+    padding: 20px;
+  }
+
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Style for the close button in the mobile menu */
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .moon-container {
+    margin-top: 20px;
+    order: 1;
+  }
+
+  .moon-container img {
+    width: 80%;
+    height: 80%;
+  }
+  .description-container {
+    margin: 30px;
+    padding: 0;
+    width: 80%;
+    height: 90%;
+    order: 2;
+  }
+
+  .copyright {
+    font-size: 6px;
+  }
+}

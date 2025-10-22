@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000 !important;
+  font-family: "Space Mono", monospace;
+  color: #fff !important;
+  font-size: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  font-size: 18px;
+}
+
+.navbar h1 {
+  cursor: default;
+}
+.navbar h1:hover {
+  color: #d93;
+  transition: 0.3s;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0px 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar a:hover {
+  color: #d93;
+  transition: 0.3s;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.main {
+  font-size: 20px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-container {
+  text-align: center;
+}
+
+.button {
+  margin-top: 20px;
+}
+.button a {
+  padding: 8px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(129, 68, 203);
+  border-radius: 5px;
+  font-weight: bold;
+}
+.button a:hover {
+  background-color: rgb(146, 94, 211);
+  transition: 0.2s;
+}
+
+.scroll-down {
+  text-align: center;
+  font-size: 24px;
+}
+
+.scroll-down a {
+  color: #fff;
+}
+.scroll-down a:hover {
+  color: rgb(146, 94, 211);
+  transition: 0.3s;
+}
+
+.about-container {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+}
+
+.description h1 {
+  color: #cc99ff;
+}
+
+.description-image img {
+  width: 500px;
+  height: 500px;
+}
+
+.description,
+.description-image {
+  margin: 0 60px;
+}
+
+.copyright {
+  font-size: 11px;
+  text-align: center;
+  margin: 15px 0;
+}
+.copyright h3 a {
+  color: #fff;
+}
+.copyright a:hover {
+  color: #cc99ff;
+  transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 10px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 3;
+  }
+
+  .nav-list {
+    font-size: 12px;
+    list-style-type: none;
+    display: none; /* Initially hide the menu */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    overflow-x: hidden;
+  }
+
+  .nav-list.menu-open {
+    display: flex; /* Display the menu when the menu-open class is applied */
+  }
+
+  .nav-list li {
+    padding: 20px;
+  }
+
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Style for the close button in the mobile menu */
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .main {
+    font-size: 16px;
+    margin: 0 15px;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-size: 12px;
+  }
+
+  .description-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .description,
+  .description-image {
+    margin: 0 30px;
+  }
+  .description-image {
+    margin-top: 40px;
+    order: 1;
+  }
+  .description {
+    margin-top: 10px;
+    order: 2;
+  }
+  .copyright {
+    font-size: 6px;
+  }
+}

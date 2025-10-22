@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      media="screen,print"
+      href="./styles/bg.css?v=2"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen,print"
+      href="./styles/gallery.css?v=2"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="icon" href="./images/icon.jpg" />
+    <title>CelestialBirths</title>
+
+    <!-- Preload images for faster render -->
+    <link
+      rel="preload"
+      as="image"
+      href="./images/altinay-dinc-LluELtL5mK4-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/history-in-hd-e5eDHbmHprg-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/filmplusdigital-IpK3kFBNJzQ-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/gabriel-tovar-LIM3_XTo_5w-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/jake-weirick-dWUPJdXiC-M-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/javardh-URLlQPnfG6Y-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/jordan-steranka-JPdapbV4C6Q-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/nasa-jlV2k_Fx0fc-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/lucasvphotos-V-2sZQ1zdoY-unsplash.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/tsvetelin-todorov-vYBPW6mas7A-unsplash.jpg"
+    />
+  </head>
+
+  <body>
+    <!--Loader -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="navbar">
+      <h1>CelestialBirths</h1>
+      <div class="hamburger-menu">
+        <div id="menu-icon">&#9776;</div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./discover.html">Discover</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a id="about-link" href="#">About us</a></li>
+      </ul>
+    </div>
+
+    <div id="popup-container" class="popup">
+      <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+        <h2>About Me</h2>
+        <p>UI Designer & Front-End Developer: Danial Jadid</p>
+        <p>Email: jadid568@gmail.com</p>
+        <p>Phone Number: +989362290937</p>
+        <p>Rasht, Gilan, Iran</p>
+        <a href="http://danialjdev.iapp.ir">danialjdev.ir</a>
+      </div>
+    </div>
+
+    <div class="bg-animation">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div id="stars4"></div>
+    </div>
+
+    <div class="pic-container">
+      <div class="pic-card">
+        <img src="./images/altinay-dinc-LluELtL5mK4-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/history-in-hd-e5eDHbmHprg-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/filmplusdigital-IpK3kFBNJzQ-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/gabriel-tovar-LIM3_XTo_5w-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/jake-weirick-dWUPJdXiC-M-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/javardh-URLlQPnfG6Y-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/jordan-steranka-JPdapbV4C6Q-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/nasa-jlV2k_Fx0fc-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/lucasvphotos-V-2sZQ1zdoY-unsplash.jpg" alt="" />
+      </div>
+      <div class="pic-card">
+        <img src="./images/tsvetelin-todorov-vYBPW6mas7A-unsplash.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="copyright">
+      <h3>
+        Created with ❤️ by <a href="http://danialjdev.iapp.ir/">Danial</a>
+      </h3>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <!-- Loader Script -->
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.classList.add("fade-out");
+        setTimeout(() => loader.remove(), 600);
+      });
+    </script>
+  </body>
+</html>
